@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday My Love</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff4f81, #ff758c);
+    color: white;
+    text-align: center;
+    overflow: hidden;
+  }
+  #scale-wrapper {
+    transform: scale(0.8);
+    transform-origin: top left;
+    width: 125vw; /* 100 / 0.8 */
+    height: 125vh;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+  }
+  .slide {
+    display: none;
+    padding: 50px;
+    height: 100vh;
+    box-sizing: border-box;
+    transition: opacity 0.6s ease;
+    opacity: 0;
+    position: relative;
+    z-index: 2;
+  }
+  .active {
+    display: block;
+    opacity: 1;
+  }
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  }
+  p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 1.3em;
+    line-height: 1.8em;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  }
+  .next-btn, .restart-btn {
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    background: rgba(255,255,255,0.9);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #ff4f81;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 10;
+    touch-action: manipulation;
+  }
+  .next-btn:hover, .restart-btn:hover {
+    background: white;
+    transform: scale(1.05);
+  }
+
+  /* Balloons */
+  .balloon {
+    position: absolute;
+    bottom: -150px;
+    width: 40px;
+    height: 50px;
+    background: pink;
+    border-radius: 50%;
+    animation: floatUp 8s infinite;
+    z-index: 1;
+  }
+  @keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-110vh) scale(1.2); opacity: 0; }
+  }
+
+  /* Firecrackers */
+  .firecracker {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: yellow;
+    border-radius: 50%;
+    animation: explode 1s ease-out forwards;
+    z-index: 1;
+  }
+  @keyframes explode {
+    to { transform: translate(var(--x), var(--y)); opacity: 0; }
+  }
+
+  /* Champagne Pop */
+  .champagne {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 40px;
+    height: 100px;
+    background: #d4af37;
+    border-radius: 10px 10px 0 0;
+    transform: translateX(-50%);
+    animation: popUp 0.5s ease-out;
+    z-index: 3;
+  }
+  .champagne::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 30px;
+    height: 20px;
+    background: #b5651d;
+    border-radius: 50%;
+  }
+  @keyframes popUp {
+    from { transform: translate(-50%, 100%); }
+    to { transform: translate(-50%, 0); }
+  }
+
+  /* Streamers */
+  .streamer {
+    position: absolute;
+    width: 4px;
+    height: 80px;
+    background: red;
+    border-radius: 2px;
+    animation: fall 3s linear forwards;
+    z-index: 2;
+  }
+  @keyframes fall {
+    0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+  }
+</style>
+</head>
+<body>
+  <div id="scale-wrapper">
+
+    <div class="slide active">
+      <h1>Happy Birthday My Love ❤️</h1>
+      <p>My love, on this special day, I wish you a lifetime filled with joy, love, and every dream you’ve ever held close to your heart coming true. May every step you take be lit with happiness, every challenge be met with courage, and every moment be touched with magic.
+
+You are my greatest gift, the most beautiful part of my life, and I promise to spend forever making sure you feel just how deeply you’re loved. You deserve the world, the stars, and every drop of happiness in between.
+
+Here’s to countless more birthdays, to endless laughter, to quiet moments where we simply exist together, and to grand adventures we’ve yet to take.
+
+I’m endlessly grateful for you, for us, and for the love we share. You are my heart, my home, my forever. I love you more than words could ever capture. 💖</p>
+      <button class="next-btn">Next ➡</button>
+    </div>
+
+    <div class="slide">
+      <h1>You Are My Everything 💕</h1>
+      <p>You are not just my love, you are the poetry my heart writes every single day. Every word, every verse, every rhythm is inspired by you. Your laughter is the sweetest melody I will never get tired of hearing, your presence is my greatest comfort, and your love is the most precious treasure I could ever hold.
+
+You have taught me what it means to truly care, to open my heart, to be vulnerable without fear, and to dream without limits. You are the reason I believe in forever, the proof that soulmates are real.
+
+Every time I look at you, I see a universe one filled with love, hope, and endless adventure. I am endlessly proud to walk this journey with you, hand in hand, heart to heart. You are my safe place, my greatest blessing, and the most beautiful story I will ever be part of.🌸</p>
+      <button class="next-btn">Next ➡</button>
+    </div>
+
+    <div class="slide">
+      <h1>Our First Meet ☕</h1>
+      <p>That first day we met at the little café will forever be etched into my soul. The air smelled of fresh coffee, but all I could feel was the magic between us. The world outside disappeared, leaving only you and me in our own perfect bubble, as if time itself had paused to witness our meeting.
+
+We laughed like we had known each other for years, and every word you spoke made my heart beat faster. When our hands touched, it was like a spark that lit something deep within me. The moment I rested my head on your shoulder, I knew truly knew that I had found my safe place.
+
+That day wasn’t just the start of our story; it was the birth of my forever. I didn’t just leave with beautiful memories, I left with your heart in mine and unknowingly, you carried mine away too. 💞</p>
+      <button class="next-btn">Next ➡</button>
+    </div>
+
+    <div class="slide">
+      <h1>Always Here for You 🤝</h1>
+      <p>Through every high and low, every storm and sunshine, I am yours completely and unconditionally. You will never have to face a single moment alone, because I will always be right here, holding your hand through the struggles, catching your tears when they fall, and sharing your laughter when joy fills the air.
+
+I’ll be your biggest supporter, cheering for you even when the world doubts you. I’ll be your strongest protector, standing between you and anything that dares to hurt you. And I’ll be your softest place to fall, wrapping you in love when you need comfort the most.
+
+No matter where life takes us, I’ll walk beside you every step of the way. You are my partner, my safe place, my home, and my everything. When the weight of the world feels heavy, lean on me I’ll carry us both. That’s my promise today, tomorrow, and forever. 💗</p>
+      <button class="next-btn">Next ➡</button>
+    </div>
+
+    <div class="slide">
+      <h1>The Night You Said Yes To Be My Girlfriend 💕</h1>
+      <p>The night of 9th August 2025 will forever live in my heart. At 1 AM, you asked me to call, and without a second’s delay, I did. From the very first hello, your voice felt like home.
+We talked for 5 hours and 48 minutes, laughing, teasing, and exchanging countless “I love you’s.” Every moment felt like time had slowed just for us.
+
+Somewhere in that magical conversation, my heart found the courage to ask what it had been longing to say “Will you be my girlfriend?”
+
+You didn’t pause, didn’t hesitate. In an instant, you said “Yes,” and that single word filled my soul with warmth and joy I can’t describe.
+
+You said yes because you trusted me, because you believed in us, and in that moment, I silently promised to honor that trust forever.
+
+It wasn’t about grand gestures or perfect scenes it was about two hearts speaking honestly in the quiet of the night.
+
+That “Yes” turned a simple call into the beginning of a forever story.
+
+From that night on, I knew I had found not just my girlfriend, but my best friend, my love, and my safe place. 🌸</p>
+      <button class="next-btn">Next ➡</button>
+    </div>
+
+    <div class="slide">
+      <h1>Happy Birthday Again 🎉</h1>
+      <p>My love, on this special day, I wish you a lifetime filled with joy, endless love, and dreams that come true. May every step you take be guided by happiness, every challenge met with strength, and every moment wrapped in magic. You deserve the world and so much more, and I promise to spend my life making sure you feel it in every heartbeat and every gesture.
+
+Here’s to countless more birthdays, to moments that take our breath away, to endless laughter that echoes through the years, and to the beautiful “us” we are building. You are my greatest blessing, my most precious gift, and the reason I smile without even trying. I am endlessly grateful for you and for the love we share.
+
+Today, let’s make memories that we’ll carry forever, moments that will shine in our hearts, and a day as unforgettable as you are to me. ❤️🎈</p>
+      <button class="restart-btn">🔄 Start Again</button>
+    </div>
+
+  </div>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function nextSlide(){
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add('active');
+}
+
+function restartSlides(){
+  slides[currentSlide].classList.remove('active');
+  currentSlide = 0;
+  slides[currentSlide].classList.add('active');
+}
+
+// Attach event listeners for buttons (works on mobile too)
+document.querySelectorAll('.next-btn').forEach(btn => {
+  btn.addEventListener('click', nextSlide);
+});
+document.querySelectorAll('.restart-btn').forEach(btn => {
+  btn.addEventListener('click', restartSlides);
+});
+
+function createBalloon(){
+  const balloon = document.createElement('div');
+  balloon.classList.add('balloon');
+  balloon.style.left = Math.random()*100 + "vw";
+  balloon.style.background = `hsl(${Math.random()*360}, 80%, 70%)`;
+  balloon.style.animationDuration = (6 + Math.random()*4) + "s";
+  document.body.appendChild(balloon);
+  setTimeout(() => balloon.remove(), 10000);
+}
+
+function createFirecracker(){
+  const count = 20;
+  for(let i=0;i<count;i++){
+    const part = document.createElement('div');
+    part.classList.add('firecracker');
+    part.style.left = (window.innerWidth/2) + "px";
+    part.style.top = (window.innerHeight/2) + "px";
+    const angle = Math.random()*2*Math.PI;
+    const distance = Math.random()*150+50;
+    part.style.setProperty('--x', Math.cos(angle)*distance + 'px');
+    part.style.setProperty('--y', Math.sin(angle)*distance + 'px');
+    part.style.background = `hsl(${Math.random()*360}, 100%, 60%)`;
+    document.body.appendChild(part);
+    setTimeout(()=>part.remove(), 1000);
+  }
+}
+
+setInterval(createBalloon, 500);
+setInterval(createFirecracker, 3000);
+</script>
+</body>
+</html>
