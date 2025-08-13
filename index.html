@@ -16,7 +16,7 @@
   #scale-wrapper {
     transform: scale(0.8);
     transform-origin: top left;
-    width: 125vw; /* 100 / 0.8 */
+    width: 125vw;
     height: 125vh;
     overflow: visible;
     margin: 0;
@@ -48,7 +48,7 @@
     line-height: 1.8em;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
   }
-  .next-btn, .restart-btn {
+  .next-btn, .restart-btn, .back-btn {
     margin-top: 30px;
     padding: 12px 25px;
     font-size: 1.1em;
@@ -62,7 +62,31 @@
     z-index: 10;
     touch-action: manipulation;
   }
-  .next-btn:hover, .restart-btn:hover {
+  .next-btn:hover, .restart-btn:hover, .back-btn:hover {
+    background: white;
+    transform: scale(1.05);
+  }
+
+  /* Main menu styles */
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+  }
+  .menu-box {
+    background: rgba(255,255,255,0.9);
+    color: #ff4f81;
+    padding: 40px 20px;
+    font-size: 1.2em;
+    border-radius: 15px;
+    cursor: pointer;
+    text-shadow: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  .menu-box:hover {
     background: white;
     transform: scale(1.05);
   }
@@ -144,7 +168,21 @@
 <body>
   <div id="scale-wrapper">
 
-    <div class="slide active">
+    <!-- Main Menu -->
+    <div class="slide active" id="main-menu">
+      <h1>💖 Main Menu 💖</h1>
+      <div class="menu-grid">
+        <div class="menu-box" data-slide="1">Happy Birthday My Love ❤️</div>
+        <div class="menu-box" data-slide="2">You Are My Everything 💕</div>
+        <div class="menu-box" data-slide="3">Our First Meet ☕</div>
+        <div class="menu-box" data-slide="4">Always Here for You 🤝</div>
+        <div class="menu-box" data-slide="5">The Night You Said Yes 💕</div>
+        <div class="menu-box" data-slide="6">Happy Birthday Again 🎉</div>
+      </div>
+    </div>
+
+    <!-- Slide 1 -->
+    <div class="slide">
       <h1>Happy Birthday My Love ❤️</h1>
       <p>My love, on this special day, I wish you a lifetime filled with joy, love, and every dream you’ve ever held close to your heart coming true. May every step you take be lit with happiness, every challenge be met with courage, and every moment be touched with magic.
 
@@ -154,8 +192,10 @@ Here’s to countless more birthdays, to endless laughter, to quiet moments wher
 
 I’m endlessly grateful for you, for us, and for the love we share. You are my heart, my home, my forever. I love you more than words could ever capture. 💖</p>
       <button class="next-btn">Next ➡</button>
+      <button class="back-btn">⬅ Back to Main Menu</button>
     </div>
 
+    <!-- Slide 2 -->
     <div class="slide">
       <h1>You Are My Everything 💕</h1>
       <p>You are not just my love, you are the poetry my heart writes every single day. Every word, every verse, every rhythm is inspired by you. Your laughter is the sweetest melody I will never get tired of hearing, your presence is my greatest comfort, and your love is the most precious treasure I could ever hold.
@@ -164,8 +204,10 @@ You have taught me what it means to truly care, to open my heart, to be vulnerab
 
 Every time I look at you, I see a universe one filled with love, hope, and endless adventure. I am endlessly proud to walk this journey with you, hand in hand, heart to heart. You are my safe place, my greatest blessing, and the most beautiful story I will ever be part of.🌸</p>
       <button class="next-btn">Next ➡</button>
+      <button class="back-btn">⬅ Back to Main Menu</button>
     </div>
 
+    <!-- Slide 3 -->
     <div class="slide">
       <h1>Our First Meet ☕</h1>
       <p>That first day we met at the little café will forever be etched into my soul. The air smelled of fresh coffee, but all I could feel was the magic between us. The world outside disappeared, leaving only you and me in our own perfect bubble, as if time itself had paused to witness our meeting.
@@ -174,8 +216,10 @@ We laughed like we had known each other for years, and every word you spoke made
 
 That day wasn’t just the start of our story; it was the birth of my forever. I didn’t just leave with beautiful memories, I left with your heart in mine and unknowingly, you carried mine away too. 💞</p>
       <button class="next-btn">Next ➡</button>
+      <button class="back-btn">⬅ Back to Main Menu</button>
     </div>
 
+    <!-- Slide 4 -->
     <div class="slide">
       <h1>Always Here for You 🤝</h1>
       <p>Through every high and low, every storm and sunshine, I am yours completely and unconditionally. You will never have to face a single moment alone, because I will always be right here, holding your hand through the struggles, catching your tears when they fall, and sharing your laughter when joy fills the air.
@@ -184,21 +228,20 @@ I’ll be your biggest supporter, cheering for you even when the world doubts yo
 
 No matter where life takes us, I’ll walk beside you every step of the way. You are my partner, my safe place, my home, and my everything. When the weight of the world feels heavy, lean on me I’ll carry us both. That’s my promise today, tomorrow, and forever. 💗</p>
       <button class="next-btn">Next ➡</button>
+      <button class="back-btn">⬅ Back to Main Menu</button>
     </div>
 
+    <!-- Slide 5 -->
     <div class="slide">
-      <h1>The Night You Said Yes To Be My Girlfriend 💕</h1>
-      <p>The night of 9th August 2025 will forever live in my heart. At 1 AM, you asked me to call, and without a second’s delay, I did.We talked for 5 hours and 48 minutes, laughing, teasing, and exchanging countless “I love you’s.”
-Somewhere in that magical conversation, my heart found the courage to ask what it had been longing to say “Will you be my girlfriend?”
-
-You didn’t pause, didn’t hesitate. In an instant, you said “Yes,” and that single word filled my soul with warmth and joy I can’t describe.
-
-It wasn’t about grand gestures or perfect scenes it was about two hearts speaking honestly in the quiet of the night.That “Yes” turned a simple call into the beginning of a forever story.
-
-From that night on, I knew I had found not just my girlfriend, but my best friend, my love, and my safe place. 🌸</p>
+      <h1>Us Together Is Blessing 💗💕</h1>
+      <p>For the past 8 months, we’ve shared a bond that grew deeper with every conversation, every laugh, and every little moment in between. From strangers to best friends, we built something beautiful something that felt right even before we had the words for it.  
+And now, for the last 13 days, we’ve stepped into a new chapter as girlfriend and boyfriend. It still feels surreal saying that out loud, but also so perfect. These days have been filled with the same laughter, love, and connection only now, there’s an extra layer of warmth, of knowing we’re truly each other’s.  
+You’ve been my safe space, my biggest comfort, and my constant light. I never expected a soul to match mine this closely, but somehow, you did. Whether it’s been 8 months or 13 days, every moment with you feels like the start of forever. And I wouldn’t want it any other way. 💖</p>
       <button class="next-btn">Next ➡</button>
+      <button class="back-btn">⬅ Back to Main Menu</button>
     </div>
 
+    <!-- Slide 6 -->
     <div class="slide">
       <h1>Happy Birthday Again 🎉</h1>
       <p>My love, on this special day, I wish you a lifetime filled with joy, endless love, and dreams that come true. May every step you take be guided by happiness, every challenge met with strength, and every moment wrapped in magic. You deserve the world and so much more, and I promise to spend my life making sure you feel it in every heartbeat and every gesture.
@@ -207,6 +250,7 @@ Here’s to countless more birthdays, to moments that take our breath away, to e
 
 Today, let’s make memories that we’ll carry forever, moments that will shine in our hearts, and a day as unforgettable as you are to me. ❤️🎈</p>
       <button class="restart-btn">🔄 Start Again</button>
+      <button class="back-btn">⬅ Back to Main Menu</button>
     </div>
 
   </div>
@@ -215,24 +259,29 @@ Today, let’s make memories that we’ll carry forever, moments that will shine
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 
-function nextSlide(){
+function showSlide(index) {
   slides[currentSlide].classList.remove('active');
-  currentSlide = (currentSlide + 1) % slides.length;
+  currentSlide = index;
   slides[currentSlide].classList.add('active');
 }
 
-function restartSlides(){
-  slides[currentSlide].classList.remove('active');
-  currentSlide = 0;
-  slides[currentSlide].classList.add('active');
-}
-
-// Attach event listeners for buttons (works on mobile too)
 document.querySelectorAll('.next-btn').forEach(btn => {
-  btn.addEventListener('click', nextSlide);
+  btn.addEventListener('click', () => showSlide((currentSlide + 1) % slides.length));
 });
+
 document.querySelectorAll('.restart-btn').forEach(btn => {
-  btn.addEventListener('click', restartSlides);
+  btn.addEventListener('click', () => showSlide(0));
+});
+
+document.querySelectorAll('.menu-box').forEach(box => {
+  box.addEventListener('click', () => {
+    const slideIndex = parseInt(box.getAttribute('data-slide'));
+    showSlide(slideIndex);
+  });
+});
+
+document.querySelectorAll('.back-btn').forEach(btn => {
+  btn.addEventListener('click', () => showSlide(0));
 });
 
 function createBalloon(){
@@ -266,6 +315,5 @@ setInterval(createBalloon, 500);
 setInterval(createFirecracker, 3000);
 </script>
 </body>
-
 </html>
 
