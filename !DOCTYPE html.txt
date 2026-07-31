@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Girlfriend Day ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio id="music" autoplay loop>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="musicBtn" onclick="toggleMusic()">
+🎵
+</div>
+
+<!-- Floating Hearts -->
+<div id="hearts"></div>
+
+<!-- Floating Flowers -->
+<div id="flowers"></div>
+
+<!-- ================= PAGE 1 ================= -->
+
+<section class="page active page1">
+
+<div class="glass">
+
+<h1>Happy Girlfriend Day ❤️</h1>
+
+<h2>To My Beautiful Princess 👑</h2>
+
+<p>
+
+From the moment you came into my life, everything started feeling brighter,
+warmer, and more meaningful.
+You have given me countless reasons to smile,
+believe in love,
+and dream about a beautiful future.
+
+Every heartbeat of mine silently whispers your name.
+Every smile on my face carries a little piece of you.
+
+Today is not just another day.
+Today is a celebration of the most beautiful girl who has changed my life forever.
+
+Happy Girlfriend Day, My Love ❤️
+
+</p>
+
+<button onclick="nextPage()">
+Next ➜
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= PAGE 2 ================= -->
+
+<section class="page page2">
+
+<div class="glass">
+
+<h1>Your Smile 🌹</h1>
+
+<p>
+
+Your smile is more beautiful than the sunrise,
+more calming than the moonlight,
+and more precious than every treasure in this world.
+
+Whenever you smile,
+my worries disappear,
+my heart becomes lighter,
+and life suddenly feels perfect.
+
+Thank you for being the light that brightens my darkest days.
+
+I promise to always protect your smile
+because it is the most beautiful thing I have ever seen.
+
+</p>
+
+<button onclick="nextPage()">
+Next ➜
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= PAGE 3 ================= -->
+
+<section class="page page3">
+
+<div class="glass">
+
+<h1>Reasons I Love You ❤️</h1>
+
+<div class="loveCards">
+
+<div class="loveCard">❤️ Your Beautiful Smile</div>
+<div class="loveCard">🌹 Your Caring Heart</div>
+<div class="loveCard">😊 Your Cute Laugh</div>
+<div class="loveCard">✨ Your Kindness</div>
+<div class="loveCard">🥰 Your Support</div>
+<div class="loveCard">💖 Everything About You</div>
+
+</div>
+
+<button onclick="nextPage()">
+Next ➜
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= PAGE 4 ================= -->
+
+<section class="page page4">
+
+<div class="glass">
+
+<h1>My Promise 💍</h1>
+
+<p>
+
+No matter what happens in life,
+I will always stand beside you.
+
+I promise to celebrate your happiness,
+support your dreams,
+hold your hand during difficult times,
+and love you with all my heart.
+
+Distance,
+time,
+or circumstances can never change how much you mean to me.
+
+You are my today,
+my tomorrow,
+and every beautiful tomorrow after that.
+
+</p>
+
+<button onclick="nextPage()">
+Next ➜
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= PAGE 5 ================= -->
+
+<section class="page page5">
+
+<div class="glass">
+
+<h1>Forever ❤️</h1>
+
+<p>
+
+If I had one wish,
+it would simply be to spend every beautiful moment with you.
+
+Thank you for entering my life
+and making it so magical.
+
+You are my greatest blessing,
+my favorite person,
+my safest place,
+and my forever love.
+
+Happy Girlfriend Day ❤️
+
+I Love You Forever 🌹
+
+</p>
+
+<button onclick="showFinal()">
+Open My Heart ❤️
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= FINAL PAGE ================= -->
+
+<section class="page final">
+
+<div class="glass">
+
+<h1>💌 A Letter For You 💌</h1>
+
+<div class="letter">
+
+<p>
+
+My Dearest Love,
+
+Thank you for making my life more beautiful than I ever imagined.
+
+You are the reason my heart smiles every day.
+
+Every memory with you is priceless.
+
+Every conversation becomes my favorite.
+
+Every moment spent together becomes a treasure.
+
+I don't know what the future holds,
+but one thing will never change—
+
+I will always choose you.
+
+Again and again.
+
+Forever.
+
+Happy Girlfriend Day,
+My Princess ❤️🌹
+
+</p>
+
+</div>
+
+<button onclick="location.reload()">
+
+Read Again ❤️
+
+</button>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+    background:#120008;
+}
+
+
+/* ===== Pages ===== */
+
+.page{
+    position:absolute;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
+    opacity:0;
+    transform:translateX(100%);
+    transition:1s ease;
+}
+
+.page.active{
+    opacity:1;
+    transform:translateX(0);
+    z-index:5;
+}
+
+
+/* ===== Luxury Backgrounds ===== */
+
+.page1{
+
+background:
+linear-gradient(
+rgba(255,105,180,.45),
+rgba(80,0,50,.55)
+),
+url("https://images.unsplash.com/photo-1518199266791-5375a83190b7");
+
+background-size:cover;
+background-position:center;
+}
+
+
+.page2{
+
+background:
+linear-gradient(
+rgba(255,182,193,.45),
+rgba(120,0,60,.55)
+),
+url("https://images.unsplash.com/photo-1490750967868-88aa4486c946");
+
+background-size:cover;
+background-position:center;
+
+}
+
+
+
+.page3{
+
+background:
+linear-gradient(
+rgba(255,105,180,.4),
+rgba(40,0,30,.7)
+),
+url("https://images.unsplash.com/photo-1495231916356-a86217efff12");
+
+background-size:cover;
+background-position:center;
+
+}
+
+
+
+.page4{
+
+background:
+linear-gradient(
+rgba(255,215,150,.35),
+rgba(80,0,40,.65)
+),
+url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+
+background-size:cover;
+background-position:center;
+
+}
+
+
+
+.page5{
+
+background:
+linear-gradient(
+rgba(255,20,147,.35),
+rgba(30,0,20,.75)
+),
+url("https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07");
+
+background-size:cover;
+background-position:center;
+
+}
+
+
+
+.final{
+
+background:
+linear-gradient(
+rgba(255,0,100,.35),
+rgba(20,0,30,.8)
+),
+url("https://images.unsplash.com/photo-1518568740560-333139a27e72");
+
+background-size:cover;
+background-position:center;
+
+}
+
+
+
+/* ===== Glass Luxury Card ===== */
+
+
+.glass{
+
+width:95%;
+max-width:430px;
+
+padding:35px 25px;
+
+background:
+rgba(255,255,255,.16);
+
+border-radius:35px;
+
+border:
+
+1px solid rgba(255,255,255,.35);
+
+
+backdrop-filter:blur(18px);
+
+
+box-shadow:
+
+0 0 40px rgba(255,105,180,.5),
+
+inset 0 0 30px rgba(255,255,255,.15);
+
+
+text-align:center;
+
+color:white;
+
+
+animation:
+
+cardShow 1.2s ease;
+
+}
+
+
+
+@keyframes cardShow{
+
+from{
+
+opacity:0;
+
+transform:scale(.6)
+rotateY(90deg);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1)
+rotateY(0);
+
+}
+
+}
+
+
+
+/* ===== Text Styling ===== */
+
+
+h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:48px;
+
+color:#fff;
+
+text-shadow:
+
+0 0 15px #ff8fc7,
+
+0 0 30px #ff4f9a;
+
+margin-bottom:15px;
+
+}
+
+
+
+h2{
+
+font-size:22px;
+
+color:#ffe6f0;
+
+margin-bottom:20px;
+
+}
+
+
+
+p{
+
+font-size:17px;
+
+line-height:2;
+
+font-weight:300;
+
+letter-spacing:.3px;
+
+color:white;
+
+margin-bottom:25px;
+
+}
+
+
+
+/* ===== Buttons ===== */
+
+
+button{
+
+border:none;
+
+padding:15px 38px;
+
+border-radius:50px;
+
+font-size:17px;
+
+font-weight:600;
+
+color:white;
+
+cursor:pointer;
+
+
+background:
+
+linear-gradient(
+45deg,
+#ff2f92,
+#ff9acb
+);
+
+
+box-shadow:
+
+0 0 20px #ff4f9a;
+
+
+transition:.4s;
+
+}
+
+
+
+button:hover{
+
+transform:scale(1.12);
+
+box-shadow:
+
+0 0 40px #ffb6d9;
+
+}
+
+
+
+/* ===== Music Button ===== */
+
+
+.musicBtn{
+
+position:fixed;
+
+top:20px;
+
+right:20px;
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+
+background:
+
+rgba(255,255,255,.2);
+
+
+backdrop-filter:blur(10px);
+
+
+font-size:25px;
+
+z-index:99;
+
+cursor:pointer;
+
+
+box-shadow:
+
+0 0 20px pink;
+
+}
+
+
+
+/* ===== Love Reason Cards ===== */
+
+
+.loveCards{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:15px;
+
+margin-bottom:25px;
+
+}
+
+
+
+.loveCard{
+
+
+padding:15px;
+
+border-radius:20px;
+
+
+background:
+
+rgba(255,255,255,.18);
+
+
+border:
+
+1px solid rgba(255,255,255,.3);
+
+
+font-size:14px;
+
+
+animation:
+
+floatCard 3s infinite alternate;
+
+
+}
+
+
+
+@keyframes floatCard{
+
+from{
+
+transform:translateY(0);
+
+}
+
+
+to{
+
+transform:translateY(-8px);
+
+}
+
+}
+
+
+
+/* ===== Letter ===== */
+
+
+.letter{
+
+padding:20px;
+
+border-radius:25px;
+
+
+background:
+
+rgba(255,255,255,.2);
+
+
+border:
+
+1px solid rgba(255,255,255,.3);
+
+
+max-height:300px;
+
+overflow:auto;
+
+}
+let currentPage = 0;
+
+const pages = document.querySelectorAll(".page");
+
+
+// ================= PAGE CONTROL =================
+
+function nextPage(){
+
+    pages[currentPage].classList.remove("active");
+
+    currentPage++;
+
+    if(currentPage < pages.length){
+
+        pages[currentPage].classList.add("active");
+
+    }
+    else{
+
+        currentPage = pages.length - 1;
+        pages[currentPage].classList.add("active");
+
+    }
+
+}
+
+
+
+// ================= MUSIC CONTROL =================
+
+const music = document.getElementById("music");
+
+let playing = false;
+
+
+function toggleMusic(){
+
+    if(playing){
+
+        music.pause();
+        playing=false;
+
+    }
+
+    else{
+
+        music.play();
+        playing=true;
+
+    }
+
+}
+
+
+
+// Try autoplay after first touch (mobile browsers block autoplay)
+
+document.body.addEventListener("click",()=>{
+
+    if(!playing){
+
+        music.play()
+        .then(()=>{
+
+            playing=true;
+
+        })
+        .catch(()=>{});
+
+    }
+
+},{once:true});
+
+
+
+
+// ================= FLOATING HEARTS =================
+
+const hearts = document.getElementById("hearts");
+
+
+function createHeart(){
+
+    let heart=document.createElement("span");
+
+    heart.innerHTML=[
+        "❤️",
+        "💖",
+        "💕",
+        "💗",
+        "💘"
+    ][Math.floor(Math.random()*5)];
+
+
+    heart.style.position="absolute";
+
+    heart.style.left=Math.random()*100+"%";
+
+    heart.style.bottom="-50px";
+
+
+    heart.style.fontSize=
+    (15+Math.random()*35)+"px";
+
+
+    heart.style.animation=
+    `heartFly ${5+Math.random()*5}s linear`;
+
+
+    heart.style.opacity=
+    Math.random();
+
+
+    hearts.appendChild(heart);
+
+
+
+    setTimeout(()=>{
+
+        heart.remove();
+
+    },10000);
+
+
+}
+
+
+setInterval(createHeart,300);
+
+
+
+
+
+// ================= FLOWER PETALS =================
+
+
+const flowers=document.getElementById("flowers");
+
+
+function createFlower(){
+
+    let flower=document.createElement("span");
+
+
+    flower.innerHTML=[
+        "🌹",
+        "🌸",
+        "🌺",
+        "🌷",
+        "✨"
+    ][Math.floor(Math.random()*5)];
+
+
+    flower.style.position="absolute";
+
+
+    flower.style.left=
+    Math.random()*100+"%";
+
+
+    flower.style.top="-50px";
+
+
+    flower.style.fontSize=
+    (15+Math.random()*30)+"px";
+
+
+    flower.style.animation=
+    `flowerFall ${6+Math.random()*6}s linear`;
+
+
+
+    flowers.appendChild(flower);
+
+
+
+    setTimeout(()=>{
+
+        flower.remove();
+
+    },12000);
+
+
+}
+
+
+setInterval(createFlower,500);
+
+
+
+
+
+
+// ================= LOVE SPARKLES =================
+
+
+function sparkle(){
+
+    let star=document.createElement("div");
+
+
+    star.innerHTML="✨";
+
+
+    star.style.position="absolute";
+
+
+    star.style.left=
+    Math.random()*100+"%";
+
+
+    star.style.top=
+    Math.random()*100+"%";
+
+
+    star.style.fontSize=
+    (10+Math.random()*25)+"px";
+
+
+    star.style.animation=
+    "sparkle 2s ease";
+
+
+
+    document.body.appendChild(star);
+
+
+
+    setTimeout(()=>{
+
+        star.remove();
+
+    },2000);
+
+}
+
+
+setInterval(sparkle,400);
+
+
+
+
+
+// ================= FINAL FIREWORKS =================
+
+
+function showFinal(){
+
+    nextPage();
+
+
+    setTimeout(()=>{
+
+        fireworks();
+
+    },500);
+
+}
+
+
+
+function fireworks(){
+
+    for(let i=0;i<80;i++){
+
+        let fire=document.createElement("div");
+
+
+        fire.innerHTML="✨";
+
+
+        fire.style.position="fixed";
+
+
+        fire.style.left="50%";
+
+        fire.style.top="50%";
+
+
+        fire.style.fontSize=
+        (15+Math.random()*25)+"px";
+
+
+        let x=(Math.random()-0.5)*500;
+
+        let y=(Math.random()-0.5)*500;
+
+
+        fire.animate([
+
+        {
+            transform:"translate(0,0)",
+            opacity:1
+        },
+
+        {
+            transform:
+            `translate(${x}px,${y}px)`,
+            opacity:0
+        }
+
+        ],
+
+        {
+
+            duration:1500,
+
+            easing:"ease-out"
+
+        });
+
+
+
+        document.body.appendChild(fire);
+
+
+
+        setTimeout(()=>{
+
+            fire.remove();
+
+        },1600);
+
+    }
+
+}
+
+
+
+
+
+// ================= ADD ANIMATION CSS =================
+
+
+const animationStyle=document.createElement("style");
+
+
+animationStyle.innerHTML=`
+
+@keyframes heartFly{
+
+0%{
+
+transform:translateY(0) rotate(0deg);
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:
+translateY(-120vh)
+rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+
+
+@keyframes flowerFall{
+
+0%{
+
+transform:
+translateY(0)
+rotate(0deg);
+
+}
+
+
+100%{
+
+transform:
+translateY(120vh)
+rotate(720deg);
+
+}
+
+}
+
+
+
+@keyframes sparkle{
+
+
+0%{
+
+transform:scale(0);
+
+opacity:0;
+
+}
+
+
+50%{
+
+transform:scale(1.5);
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:scale(0);
+
+opacity:0;
+
+}
+
+}
+
+`;
+
+
+
+document.head.appendChild(animationStyle);
